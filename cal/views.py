@@ -11,7 +11,7 @@ from .utils import Calendar
 from .forms import EventForm
 
 def index(request):
-    return HttpResponse('hello')
+    return HttpResponse('Hi, Tyra is here.')
 
 class CalendarView(generic.ListView):
     model = Event

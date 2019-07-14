@@ -1,0 +1,67 @@
+{% load staticfiles %}
+
+<html>
+    <head>
+        <style type="text/css">
+        .heading{
+            margin-top: 50px;
+        }
+        .desc{
+            margin-top: 25px;
+        }
+        .start_time{
+            margin-top: 25px;
+        }
+        .end_time{
+            margin-top: 25px;
+        }
+        </style>
+        <link rel="stylesheet" href="{% static  'cal/css/styles.css' %}">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body style="background-color: #fffefe">
+        
+            
+        <table class=" table table-hover table-borderless container event_list ">
+            
+            
+             <thead class="thead-dark">
+                <tr >
+                        <th class="lead thevent" scope="col">Event Name</th>
+                        <th class="lead"  scope="col">Description</th> 
+                        <th class="lead"  scope="col"> From</th>
+                        <th class="lead"  scope="col">  To </th>
+                    
+                    </tr>
+           
+                </thead>
+                
+                <!--nice dude , shifted this template from top to here so that heading doesn't gets rendered again and again-->
+            {% for event in events_per_day %}
+            
+           <tbody>
+            <tr scope="row"> 
+                <tr > 
+                    <td >
+                            <fragment class="heading "><span class="text">{{event.title}}</span></fragment> 
+                    </td>
+                    <td >
+                            <fragment class="desc "><span class="text"> {{event.description}}</span></fragment>
+
+                    </td>
+                    <td>
+                       
+                    <fragment class="end_time "><span class="text">{{event.start_time}}</span></fragment>
+                    </td>
+                    <td >
+                     
+                      <fragment class="start_time "><span class="text">{{event.end_time}}</span></fragment>
+                    </td>
+                </tr>
+            </tbody>
+            {% endfor %}
+            </table>
+            
+    </body>
+</html> 

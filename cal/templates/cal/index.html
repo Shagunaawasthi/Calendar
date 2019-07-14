@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <style type="text/css">
+    .jumbotron{
+      width:90%;
+      border-radius:8px;
+      margin-left: 62px;
+     
+
+    }
+   
+    
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+    </head>
+  <body style="background-color:#fdf5f9;">
+      <div class="jumbotron ">
+          
+              <h1 class="display-4">Hello,</h1>
+              <p class="lead">Please follow these instructions to use this simple calendar app.</p>
+              <hr class="my-4">
+              <ul> For Users:
+              <li>For viewing calendar go to <span><a href="{% url 'cal:calendar' %}">calendar</a></span></li>
+              <li>For access to admin portal go to <span><a  href="{% url  'admin:index' %}">admin</a></span></li>
+            </ul>
+              <ul>For Admin:
+              <li>While registering Ramadaan holidays , please enter the title of event as "Ramadaan"</li>
+            </ul>
+            <br>
+           
+              <a  style="position: absolute !important;right: 100px;bottom:200px" href="https://www.albasmelter.com/Pages/default.aspx">About Us</a>
+              
+           
+
+              
+           
+      </div>
+  </body>
+</html>

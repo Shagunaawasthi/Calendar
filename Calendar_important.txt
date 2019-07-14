@@ -1,0 +1,144 @@
+#h = ''
+		#x=''
+		#a=''
+		#y=''
+		#z=''
+		#l=''
+		#j=''
+		#k=''
+		#m=''
+		#n=''
+		#date='2019-5-5'
+		
+		
+
+		#print(Ramadaan_event)
+	
+		#j={self.month}
+		#print(j)
+		#k=({self.year})
+		#l={day}
+		#v=set(map(str,j))
+		#o=set(map(str,k))
+		#n=set(map(str,l))
+		#q=''.join(v)
+		#p=''.join(o)
+		
+	#	w=''.join(n)
+    	
+		#n=j+k+l
+		#date=p+'-'+'0'+q+'-'+w
+		#print(type(date))
+		#print(type(n))
+		#m=datetime.strptime('n','%Y-%m-%d')
+		#print(m)
+		
+    	
+		
+		
+		
+
+			#print(type(x))
+			#print(y)
+
+  
+
+
+
+		
+		#Ramadaan_event= events.filter(title__iexact='Ramadaan')
+	#	for event in Ramadaan_event:
+			#x=event.start_time
+			#print(type(x))
+			
+			#z= datetime.strptime(date,'%Y-%m-%d')
+			#print(type(z))
+
+			#y= event.end_time
+
+			#if w[0] == '0':
+				#z=datetime.strptime('5555-01-01','%Y-%m-%d').replace(tzinfo=timezone.utc)
+			#else:
+				#z=datetime.strptime(date,'%Y-%m-%d').replace(tzinfo=timezone.utc)
+
+			
+			#if(x<=z and z<=y):
+			#	print(x.tzinfo)
+			#	print(z.tzinfo)
+			#	print(y.tzinfo)
+			#print(date)
+			#print("yoho")
+			#else:
+			#	print(x)
+			#	print(y)
+			#print(date)
+			#	print("oho")
+
+				
+			#a= datetime.datetime.strptime(x,"%Y%m%d").date()
+			#y=event.end_time.strftime("%m/%d/%Y")
+
+		#print(z)
+		
+		#print(type(z))
+ 
+
+		
+		
+			
+			
+
+		#t='Ramadaan'
+		#AP_events = events.filter(title__iexact = 'AP')
+		#print(AP_events)
+		#for event in AP_events:
+			#print(event.title)
+			#print(event.start_time)
+			#print(event.end_time)
+		
+		 
+
+		
+	
+		
+		#	y=event.end_time
+	    
+
+		
+		#x = Ramadaan_event.title
+		#if Ramadaan_event.start_time <= day and Ramadaan_event.end_time >= day:
+		#	h = "ram"
+		#else:
+		 #	h=""
+		#print(x)
+		
+		#events123 = events.filter(start_time__day=x)
+		#print(events123)
+		#print(events_per_day)
+
+
+
+
+
+
+
+ l=""
+    if req_month:
+        print("yeahright")
+       # year, month = (int(x) for x in req_month.split('-'))
+        #return date(year, month, day=1)
+    else:
+        #t=datetime.today()
+        #a=datetime.strftime(t,'%Y')
+#
+        #initial_date= a +"-"+ "01"+"-" + "01"
+        #return_object=datetime.strptime(initial_date,'%Y-%m-%d').replace(tzinfo=timezone.utc)
+         l=datetime.today()- offsets.YearBegin()
+
+        
+    return l
+
+
+
+dude get date mai issue hai. tune monthly likha tha. and then loop kr diya. this won't work. we werre rendering
+on the basis of month and year. we should now only render on the basis of year.

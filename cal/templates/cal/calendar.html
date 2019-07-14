@@ -1,15 +1,77 @@
 {% extends 'cal/base.html' %}
 
 {% block title %}
-Calendar
+
 {% endblock %}
 
 {% block content %}
-<div class="clearfix">
-	<a class="btn btn-info left" href="{% url 'cal:calendar' %}?{{ prev_month }}"> Previous Month </a>
-	<a class="btn btn-info right" href="{% url 'cal:calendar' %}?{{ next_month }}"> Next Month </a>
-	<a class="btn btn-info right" href="{% url 'cal:event_new' %}"> New Event </a>
+<div class="clearfix  " style="max-height:110px;min-width:300px ">
+<div class="container" style="min-width:300px " >
+			
+				<div class="row align-items-start justify-content-md-center "style="position:relative">
+						<div class="col-"  style="position: absolute !important;left: 1px;">
+								<a class="btn btn-xs color" href="{% url 'cal:event_new' %}" title="Home"  style ="border-radius:8px;margin-top: 12px;"><i class="material-icons">
+									home
+									</i> </a>
+						</div>
+					
+						<div class="col-">
+								<a class="btn btn-xs color" href="{% url 'cal:calendar' %}?{{ prev_month }}" title= {{prev_month}} style ="border-radius:8px;margin-top: 12px;"><i class="fas fa-angle-double-left"></i> </a>
+						</div>
+						<div class="col-">
+								<a class="btn btn-xs color"  style ="border-radius:8px;margin-top: 12px;"> {{ calendar_year }} </a>
+						</div>
+						<div class="col-">
+								<a class="btn btn-xs color" href="{% url 'cal:calendar' %}?{{ next_month }}" style ="border-radius:8px;margin-top: 12px;" title= {{next_month}}> <i class="fas fa-angle-double-right"></i> </a>
+						</div>
+						<div class="col-"  style="position: absolute !important;
+						right: 1px;">
+								<a class="btn btn-xs color" href="{% url 'cal:calendar' %}" title= {{current_year}} style ="border-radius:8px;margin-top: 12px;" ><i class="material-icons">calendar_today</i> </a>
+						</div>
+
+							
+				</div>
+
+
+				<div style="display: flex;width:80%;margin:auto;justify-content:space-between;text-align: center">
+
+						
+						<div style="display: flex; align-items:center" >
+								<div style="background-color: pink;border-radius: 50%;width:20px;height:20px;margin-right: 8px"></div>
+								<span>PayRoll Closing</span>	  
+								
+						</div>
+						<div  style="display: flex; align-items:center" >
+								<div style="background-color: #fdfa2a;border-radius: 50%;width:20px;height:20px;margin-right: 8px"></div>
+								<span>Salary To Bank</span>	  
+								
+						</div>
+						<div  style="display: flex; align-items:center" >
+								<div style="background-color: #7bff3d;border-radius: 50%;width:20px;height:20px;margin-right: 8px"></div>
+								<span>Month End</span>	  
+								
+						</div>
+						<div  style="display: flex; align-items:center" >
+								<div style="background-color:#97f897;border-radius: 50%;width:20px;height:20px;margin-right: 8px"></div>
+								<span>Ramadaan</span>	  
+								
+						</div>
+						
+				</div>
+				
+						
+				
+			
 </div>
 
-{{ calendar }}
-{% endblock %}
+</div>
+
+	<!--a class="btn btn-info left background-color: #f3f3f3;" href="{% url 'cal:calendar' %}?{{ prev_month }}"> Previous Year </a>
+	<a class="btn btn-info center  background-color:#fff0f8;" href="{% url 'cal:calendar' %}"> Current Year </a>
+	<a class="btn btn-info right background-color:#cee1f3; " href="{% url 'cal:calendar' %}?{{ next_month }}"> Next Year </a>
+	<a class="btn btn-info right" href="{% url 'cal:event_new' %}"> New Event </a-->
+</div>
+<div class="cali container ">	
+	{{ calendar }}
+</div>
+	{% endblock %}
